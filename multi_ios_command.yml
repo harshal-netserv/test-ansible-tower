@@ -1,6 +1,7 @@
 ---
 - hosts: Switches
   gather_facts: false
+  connection: network_cli
   vars:
     command_list:
       # - show cdp neigh
