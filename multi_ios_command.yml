@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: Switches
   gather_facts: false
   vars:
     command_list:
@@ -20,4 +20,4 @@
     - name: "Put all the files together into one nice text file"
       template:
         src: template.j2
-        dest: ~/backups/{{hostvars.localhost.DTG}}
+        dest: ~/home/netserv/Documents/backups/{{hostvars.localhost.DTG}}
