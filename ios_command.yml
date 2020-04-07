@@ -1,0 +1,17 @@
+---
+- hosts : all 
+  gather_facts: false
+  tasks: 
+    - name: Show run on device
+      ios_command:
+        commands:
+          - show run
+      register: config
+
+- hosts: all
+  gather_facts: false
+  tasks:
+    -name: Save output to ~/backups/
+     copy:
+       content: "{{config.stdout[0]}}"
+       dest:  ~/backups/{{hostvars.localhost.DTG}}

@@ -1,0 +1,14 @@
+---
+- name : Get ansible date and time facts
+  setup : 
+    filter : "ansible_date_time"
+    gathe_subnet : "!all"
+
+- name : Store DTG as facts
+  set_fact : 
+    DTG : "{{ansible_date_time.date}}"
+
+- name : Create Directory {{hostvars.localhost.DTG}}
+  file : 
+    path: ~/backups/{{hostvars.localhost.DTG}}
+    state: directory

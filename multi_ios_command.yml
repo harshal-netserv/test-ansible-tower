@@ -1,0 +1,23 @@
+---
+- hosts: all
+  gather_facts: false
+  vars:
+    command_list:
+      # - show cdp neigh
+      # - show environment all
+      # - show ip ospf neigh
+      - show clock
+      - show user
+      - show int status | inc connected
+      - show arp
+      - show ip interface brief | exc admin
+  tasks: 
+    - name: Run the show command and save output
+      ios_command:
+        commands: "{{command_list}}"
+      register: output 
+
+    - name: "Put all the files together into one nice text file"
+      template:
+        src: template.j2
+        dest: ~/backups/{{hostvars.localhost.DTG}}
