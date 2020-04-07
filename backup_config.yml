@@ -2,8 +2,3 @@
 - hosts : localhost
   tasks : 
     - include: create_directory.yml
-
-  run_once: true 
-
-- include: ios_command.yml
-- include: multi_ios_command.yml
