@@ -1,6 +1,5 @@
 ---
 - hosts : localhost
-  connection : local
   tasks : 
     - include: create_directory.yml
 
