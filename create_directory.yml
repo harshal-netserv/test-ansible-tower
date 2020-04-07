@@ -2,7 +2,7 @@
 - name : Get ansible date and time facts
   setup : 
     filter : "ansible_date_time"
-    gather_subnet : "!all"
+    gather_subset : "!all"
 
 - name : Store DTG as facts
   set_fact : 
