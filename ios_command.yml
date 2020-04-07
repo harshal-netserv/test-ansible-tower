@@ -1,6 +1,7 @@
 ---
 - hosts : Switches 
   gather_facts: false
+  connection: network_cli
   tasks: 
     - name: Show run on device
       ios_command:
