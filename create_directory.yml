@@ -10,5 +10,5 @@
 
 - name : Create Directory {{hostvars.localhost.DTG}}
   file : 
-    path: ~/backups/{{hostvars.localhost.DTG}}
+    path: ~/home/netserv/Documents/backups/{{hostvars.localhost.DTG}}
     state: directory
