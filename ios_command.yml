@@ -1,5 +1,5 @@
 ---
-- hosts : all 
+- hosts : Switches 
   gather_facts: false
   tasks: 
     - name: Show run on device
@@ -8,7 +8,7 @@
           - show run
       register: config
 
-- hosts: all
+- hosts: Switches
   gather_facts: false
   tasks:
     -name: Save output to ~/home/netserv/Documents/backups/
