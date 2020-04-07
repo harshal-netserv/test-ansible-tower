@@ -11,7 +11,7 @@
 - hosts: all
   gather_facts: false
   tasks:
-    -name: Save output to ~/backups/
+    -name: Save output to ~/home/netserv/Documents/backups/
      copy:
        content: "{{config.stdout[0]}}"
-       dest:  ~/backups/{{hostvars.localhost.DTG}}
+       dest:  ~/home/netserv/Documents/backups/{{hostvars.localhost.DTG}}
