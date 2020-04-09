@@ -9,7 +9,7 @@
           - show run
       register: config
       
-    - name: Save output to ~/backups/
+    - name: Save output 
       copy:
         content: "{{config.stdout[0]}}"
-        dest:  ~/backups/config_data.txt
+        dest:  ~/config_data.txt
