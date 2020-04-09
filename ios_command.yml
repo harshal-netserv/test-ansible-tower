@@ -8,14 +8,8 @@
         commands:
           - show run
       register: config
-
-- hosts: localhost
-  connection: local
-  gather_facts: false
-  become: yes
-  become_method: sudo
-  tasks:
+      
     - name: Save output to ~/var/lib/awx/backups/
       copy:
         content: "{{config.stdout[0]}}"
-        dest:  ~/var/lib/awx/backups/data.txt
+        dest:  ~/var/lib/awx/backups/config_data.txt
