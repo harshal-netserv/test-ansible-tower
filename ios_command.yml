@@ -10,7 +10,9 @@
       register: config
       
     - name: Save output
-      become: yes
       copy:
         content: "{{config.stdout[0]}}"
-        dest:  ~/home/netserv/Documents/testfile/config_data.txt
+        dest:  ~/config_data.txt
+        owner: root
+        group: root
+        mode: 0644
