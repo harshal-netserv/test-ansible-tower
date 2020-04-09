@@ -11,4 +11,5 @@
 - name : Create Directory {{hostvars.localhost.DTG}}
   file : 
     path: /"{{hostvars.localhost.DTG}}"
+    owner: awx
     state: directory
