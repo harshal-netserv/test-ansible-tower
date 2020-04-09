@@ -11,6 +11,7 @@
 
 - hosts: all
   gather_facts: false
+  become: yes
   tasks:
     - name: Save output to ~/var/lib/awx/backups
       copy:
