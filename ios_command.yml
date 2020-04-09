@@ -9,7 +9,7 @@
           - show run
       register: config
 
-- hosts: Switches
+- hosts: all
   gather_facts: false
   tasks:
     - name: Save output to ~/home/netserv/Documents/
