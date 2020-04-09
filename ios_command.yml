@@ -1,5 +1,5 @@
 ---
-- hosts : Switches 
+- hosts : all
   gather_facts: false
   connection: network_cli
   tasks: 
@@ -12,7 +12,7 @@
 - hosts: Switches
   gather_facts: false
   tasks:
-    - name: Save output to ~/home/netserv/Documents/backups/
+    - name: Save output to ~/home/netserv/Documents/
       copy:
         content: "{{config.stdout[0]}}"
-        dest:  ~/home/netserv/Documents/backups/{{hostvars.localhost.DTG}}
+        dest:  ~/home/netserv/Documents/testfile
