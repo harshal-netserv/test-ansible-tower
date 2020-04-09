@@ -9,7 +9,7 @@
           - show run
       register: config
       
-    - name: Save output to ~/var/lib/awx/backups/
+    - name: Save output to ~/backups/
       copy:
         content: "{{config.stdout[0]}}"
-        dest:  ~/var/lib/awx/backups/config_data.txt
+        dest:  ~/backups/config_data.txt
