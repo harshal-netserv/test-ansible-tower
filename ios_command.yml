@@ -9,7 +9,8 @@
           - show run
       register: config
       
-    - name: Save output 
+    - name: Save output
+      become: yes
       copy:
         content: "{{config.stdout[0]}}"
-        dest:  ~/config_data.txt
+        dest:  ~/home/netserv/Documents/testfile/config_data.txt
