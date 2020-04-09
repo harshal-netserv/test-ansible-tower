@@ -9,7 +9,8 @@
           - show run
       register: config
 
-- hosts: all
+- hosts: localhost
+  connection: local
   gather_facts: false
   become: yes
   become_method: sudo
