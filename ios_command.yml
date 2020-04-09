@@ -13,6 +13,7 @@
       copy:
         content: "{{config.stdout[0]}}"
         dest:  ~/config_data.txt
-        owner: root
-        group: root
+        become: yes
+        owner: awx
+        group: awx
         mode: 0644
