@@ -11,7 +11,7 @@
 - name : Create Directory {{hostvars.localhost.DTG}}
   file : 
     path: /var/lib/awx/backups/{{hostvars.localhost.DTG}}
-    owner: "awx",
-    group: "awx",
-    mode: "0755",
+    owner: "awx"
+    group: "awx"
+    mode: "0755"
     state: directory
