@@ -12,7 +12,7 @@
 - hosts: all
   gather_facts: false
   tasks:
-    - name: Save output to ~/var/lib/awx/backups/
+    - name: Save output to ~/var/lib/awx/backups
       copy:
         content: "{{config.stdout[0]}}"
-        dest:  ~/var/lib/awx/backups/{{hostvars.localhost.DTG}}
+        dest:  ~/var/lib/awx/backups
