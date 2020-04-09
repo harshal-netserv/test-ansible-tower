@@ -10,6 +10,6 @@
 
 - name : Create Directory {{hostvars.localhost.DTG}}
   file : 
-    path: /var/lib/awx/backups/"{{hostvars.localhost.DTG}}"
-    owner: awx
+    path: ~/home/Download/"{{hostvars.localhost.DTG}}"
+    owner: netserv
     state: directory
