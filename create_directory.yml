@@ -10,10 +10,10 @@
 
 - name : Create Directory "2020-04-10"
   file : 
-    path: "~/2020-04-10"
+    path: "/home/netserv/Documents/2020-04-10"
     recurse: yes
-    owner: awx
-    group: awx
+    owner: root
+    group: root
     state: directory
     mode: 755
   
