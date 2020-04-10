@@ -12,8 +12,7 @@
   file : 
     path: "~/2020-04-10"
     recurse: yes
-    owner: awx
-    group: awx
+    owner: root
+    group: root
     state: directory
-  sudo: true
   
