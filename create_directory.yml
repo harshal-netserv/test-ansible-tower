@@ -12,7 +12,7 @@
   file : 
     path: "~/2020-04-10"
     recurse: yes
-    owner: root
-    group: root
+    owner: awx
+    group: awx
     state: directory
   
