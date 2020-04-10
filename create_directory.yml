@@ -15,4 +15,5 @@
     owner: awx
     group: awx
     state: directory
+    mode: 755
   
