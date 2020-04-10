@@ -11,5 +11,8 @@
 - name : Create Directory {{hostvars.localhost.DTG}}
   file : 
     path: ~/"{{hostvars.localhost.DTG}}"
-    owner: awx
+    recurse: yes
+    owner: root
+    group: root
     state: directory
+  sudo: true
