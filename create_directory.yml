@@ -16,4 +16,5 @@
     group: root
     state: directory
     mode: 755
+  sudo: yes
   
