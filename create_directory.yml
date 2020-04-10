@@ -8,11 +8,12 @@
   set_fact : 
     DTG : "{{ansible_date_time.date}}"
 
-- name : Create Directory "{{hostvars.localhost.DTG}}"
+- name : Create Directory "2020-04-10"
   file : 
-    path: "~/{{hostvars.localhost.DTG}}"
+    path: "~/2020-04-10"
     recurse: yes
     owner: awx
     group: awx
     state: directory
+  sudo: true
   
