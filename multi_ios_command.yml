@@ -1,5 +1,5 @@
 ---
-- hosts: Switches
+- hosts: all
   gather_facts: false
   connection: network_cli
   vars:
@@ -21,4 +21,4 @@
     - name: "Put all the files together into one nice text file"
       template:
         src: template.j2
-        dest: ~/home/netserv/Documents/backups/{{hostvars.localhost.DTG}}
+        dest: ~/network_config.txt
