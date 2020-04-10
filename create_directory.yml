@@ -2,15 +2,15 @@
 - name : Get ansible date and time facts
   setup : 
     filter : "ansible_date_time"
-    gather_subset : "!all"
+    gather_subset : "all"
 
 - name : Store DTG as facts
   set_fact : 
     DTG : "{{ansible_date_time.date}}"
 
-- name : Create Directory {{hostvars.localhost.DTG}}
+- name : Create Directory "{{hostvars.localhost.DTG}}"
   file : 
-    path: ~/"{{hostvars.localhost.DTG}}"
+    path: "~/{{hostvars.localhost.DTG}}"
     recurse: yes
     owner: root
     group: root
