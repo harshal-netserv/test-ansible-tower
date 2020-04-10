@@ -12,8 +12,7 @@
   file : 
     path: "~/{{hostvars.localhost.DTG}}"
     recurse: yes
-    owner: root
-    group: root
+    owner: awx
+    group: awx
     state: directory
-    seuser: root
   
