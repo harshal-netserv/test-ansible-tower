@@ -21,4 +21,6 @@
     - name: "Put all the files together into one nice text file"
       template:
         src: template.j2
+        owner: root
+        group: root
         dest: /home/netserv/network_config.txt
