@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  gather_facts: false
+  gather_facts: true
   connection: network_cli
   vars:
     command_list:
@@ -21,6 +21,4 @@
     - name: "Put all the files together into one nice text file"
       template:
         src: template.j2
-        owner: root
-        group: root
-        dest: /home/netserv/network_config.txt
+        dest: ~/network_config.txt
