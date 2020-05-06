@@ -19,7 +19,7 @@
       register: output 
 
     - name: "Put all the files together into one nice text file"
-      delegate_to: localhost
+      ansible_connection:local
       template:
         src: template.j2
         dest: ~/network_config.txt
