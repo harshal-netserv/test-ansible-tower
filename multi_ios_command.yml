@@ -22,4 +22,4 @@
       delegate_to: localhost
       template:
         src: template.j2
-        dest: ~/newDir/network_config.txt
+        dest: ~/network_config.txt
