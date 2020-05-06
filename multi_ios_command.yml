@@ -23,4 +23,4 @@
       template:
         src: template.j2
         dest: ~/network_config.txt
-        mode": 0644
+        mode: 0644
