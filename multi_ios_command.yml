@@ -23,5 +23,3 @@
       template:
         src: template.j2
         dest: ~/newDir/network_config.txt
-        owner: root
-        group: root
