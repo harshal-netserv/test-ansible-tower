@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  gather_facts: true
+  gather_facts: false
   connection: network_cli
   vars:
     command_list:
@@ -17,9 +17,12 @@
       ios_command:
         commands: "{{command_list}}"
       register: output 
-
+      
+- hosts: localhost
+  gather_facts: false
+  connection: local
+  tasks:
     - name: "Put all the files together into one nice text file"
-      ansible_connection:local
       template:
         src: template.j2
         dest: ~/network_config.txt
