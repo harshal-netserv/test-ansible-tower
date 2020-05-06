@@ -18,10 +18,6 @@
         commands: "{{command_list}}"
       register: output 
       
-- hosts: localhost
-  gather_facts: false
-  connection: local
-  tasks:
     - name: "Put all the files together into one nice text file"
       template:
         src: template.j2
