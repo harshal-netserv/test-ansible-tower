@@ -17,6 +17,9 @@
       ios_command:
         commands: "{{command_list}}"
       register: output 
+     
+    - debug:
+        var: output.stdout_lines
       
     - name: "Put all the files together into one nice text file"
       template:
